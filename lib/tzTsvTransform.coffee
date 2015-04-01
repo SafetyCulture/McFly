@@ -13,7 +13,7 @@ class TzTsvTranform extends stream.Transform
   # @param [Function] callback Function to call when this transform is complete
   _transform: (chunk, encoding, callback) ->
     # Searches for tabs and multiple tabs and replaces them with a single tab.
-    @push chunk.toString().replace(/\t+/g, '	')
+    @push chunk.toString().replace(/\t+/g, ' ')
     callback()
 
 module.exports = TzTsvTranform
