@@ -1,5 +1,5 @@
 {
-  "name": "McFly",
+  "name": "mcfly-timezone",
   "version": "1.0.0",
   "description": "Changes deprecated timezone formats into modern IANA Olsen Timezone formats.",
   "author": {
