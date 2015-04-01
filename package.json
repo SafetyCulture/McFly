@@ -1,0 +1,26 @@
+{
+  "name": "McFly",
+  "version": "1.0.0",
+  "description": "Changes deprecated timezone formats into modern IANA Olsen Timezone formats.",
+  "author": {
+    "name": "Tristan Davey",
+    "email": "tristan.davey@safetyculture.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SafetyCulture/McFly.git"
+  },
+  "private": true,
+  "dependencies": {
+    "coffee-script": "^1.9.1",
+    "csv-parse": "^0.1.0",
+    "stream-transform": "0.0.7"
+  },
+  "devDependencies": {
+    "codo": "^2.0.11",
+    "coffee-coverage": "^0.4.5",
+    "coffeedoc": "^0.3.1",
+    "coffeelint": "^1.9.3",
+    "mocha": "^2.2.1"
+  }
+}

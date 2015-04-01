@@ -1,0 +1,8 @@
+# A comment to test
+
+# Link	TARGET			LINK-NAME
+Link	Etc/Modern		Deprecated
+Link	Etc/Modern2	Continent/Deprecated2
+Link	Etc/Modern3	Continent/Country/Deprecated3
+BadLink	Etc/ModernBad	DeprecatedBad
+Link	Etc/ModernDoubleTab		DeprecatedDoubleTab
