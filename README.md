@@ -1,31 +1,38 @@
-# McFly
-Converts obsolete IANA/Olsen timezone strings into modern IANA Timezone Database strings.
 
-             __---~~~~--__                      __--~~~~---__
-            `\---~~~~~~~~\\                    //~~~~~~~~---/'
-              \/~~~~~~~~~\||                  ||/~~~~~~~~~\/
-                          `\\                //'
-                            `\\            //'
-                              ||          ||      Hey Doc!
-                    ______--~~~~~~~~~~~~~~~~~~--______
-               ___ // _-~                        ~-_ \\ ___
-              `\__)\/~                              ~\/(__/'
-               _--`-___                            ___-'--_
-             /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\
-            /|        `\         ________         /'        |\
-           | `\   ______`\_      \------/      _/'______   /' |
-           |   `\_~-_____\ ~-________________-~ /_____-~_/'   |
-           `.     ~-__________________________________-~     .'
-            `.      [_______/------|~~|------\_______]      .'
-             `\--___((____)(________\/________)(____))___--/'
-              |>>>>>>||                            ||<<<<<<|
-              `\<<<<</'                            `\>>>>>/'
+                         __---~~~~--__                      __--~~~~---__
+                        `\---~~~~~~~~\\                    //~~~~~~~~---/'
+                          \/~~~~~~~~~\||                  ||/~~~~~~~~~\/
+                                      `\\                //'
+                                        `\\            //'
+                                          ||          ||      Hey Doc!
+                                ______--~~~~~~~~~~~~~~~~~~--______
+                           ___ // _-~                        ~-_ \\ ___
+                          `\__)\/~                              ~\/(__/'
+                           _--`-___                            ___-'--_
+                         /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\
+                        /|        `\         ________         /'        |\
+                       | `\   ______`\_      \------/      _/'______   /' |
+                       |   `\_~-_____\ ~-________________-~ /_____-~_/'   |
+                       `.     ~-__________________________________-~     .'
+                        `.      [_______/------|~~|------\_______]      .'
+                         `\--___((____)(________\/________)(____))___--/'
+                          |>>>>>>||                            ||<<<<<<|
+                          `\<<<<</'                            `\>>>>>/'
+
+# McFly
 
 ## Purpose and Intent
 
 McFly provides a convenient mechanism to modernise obsolete Olsen/IANA timezone strings into their modern equivalent.
   It is specifically designed to ingest 'link' files provided by IANA as part of their Timezone Database which are
   used to alias one timezone string to another timezone string.
+  
+## Installation
+
+Install via NPM
+
+    npm install @safetyculture/mcfly-timezone
+    
 
 ### Default conversions
 
@@ -65,35 +72,32 @@ Require the McFly module and call the `convert` method passing in the `oldTimezo
 
 #### Using default options
 
-```
-mcFly.convert("Asia/Saigon", function(error, result){
-    \\ Output Asia/Ho_Chi_Minh
-    console.log(result);
-})
-```
+    mcFly.convert("Asia/Saigon", function(error, result){
+        \\ Output Asia/Ho_Chi_Minh
+        console.log(result);
+    })
 
 #### Using custom options
 
-```
-options = {
-    conversions: {
-        'Europe/Belfast': 'Europe/London',
-        'GB': 'Europe/London',
-        'GB-Eire': 'Europe/London'
-    },
-    ignore: /\//
-}
 
-mcFly.convert("Europe/Belfast", options, function(error, result){
-    \\ Output Europe/Belfast
-    console.log(result);
-})
-
-mcFly.convert("GB", options, function(error, result){
-    \\ Output Europe/London
-    console.log(result);
-})
-```
+    options = {
+        conversions: {
+            'Europe/Belfast': 'Europe/London',
+            'GB': 'Europe/London',
+            'GB-Eire': 'Europe/London'
+        },
+        ignore: /\//
+    }
+    
+    mcFly.convert("Europe/Belfast", options, function(error, result){
+        \\ Output Europe/Belfast
+        console.log(result);
+    })
+    
+    mcFly.convert("GB", options, function(error, result){
+        \\ Output Europe/London
+        console.log(result);
+    })
 
 ## Caveats
 
