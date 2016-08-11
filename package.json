@@ -1,7 +1,9 @@
 {
   "name": "mcfly-timezone",
   "version": "1.1.0",
-  "description": "Changes deprecated timezone formats into modern IANA Olsen Timezone formats.",
+  "description": "Changes deprecated timezone strings into modern IANA Olsen Timezone equivalents.",
+  "license" : "Apache-2.0",
+  "keywords": ["timezone", "timezones", "zoneinfo", "tzdata", "tz", "olson", "iana", "deprecated", "backward", "historical", "old", "convert", "conversion", "modernise", "modern"],
   "author": {
     "name": "Tristan Davey",
     "email": "tristan.davey@safetyculture.io"
