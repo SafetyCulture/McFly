@@ -21,6 +21,8 @@
 
 # McFly
 
+[![Build Status](https://travis-ci.org/SafetyCulture/McFly.svg?branch=master)](https://travis-ci.org/SafetyCulture/McFly)
+
 ## Purpose and Intent
 
 McFly provides a convenient mechanism to modernise obsolete Olsen/IANA timezone strings into their modern equivalent.
@@ -31,7 +33,7 @@ McFly provides a convenient mechanism to modernise obsolete Olsen/IANA timezone 
 
 Install via NPM
 
-    npm install @safetyculture/mcfly-timezone
+    npm install mcfly-timezone
     
 
 ### Default conversions
@@ -40,7 +42,7 @@ McFly, by default, utilises the 'backward' database, part of the larger IANA Tim
   under a Public Domain license. This will convert all deprecated timezone strings which have at any time formed a part
   of the IANA or Olsen Timezone Databases to their modern equivalent.
 
-Included 'Backward' Version: **2015b**
+Included 'Backward' Version: **2016f**
 
 #### Limitations
 
@@ -104,3 +106,4 @@ Require the McFly module and call the `convert` method passing in the `oldTimezo
 * When using conversions loaded from a file these are cached in-memory for the lifetime of the module's life in memory.
     This means changes to the state of conversions of the filesystem may not be updated unless the module is re-imported
     or the `_conversionCache` property on the module root is cleared.
+    
