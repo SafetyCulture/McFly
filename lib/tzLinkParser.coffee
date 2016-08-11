@@ -54,7 +54,8 @@ parse = (streams, callback) ->
 
     for fileResult in results
       for result in fileResult
-        if result.type? and result.type == ACCEPTED_TYPE and result.target? and result.target != "" and result.link? and result.link != ""
+        if result.type? and result.type == ACCEPTED_TYPE and result.target? and result.target != "" and
+        result.link? and result.link != ""
           conversions[result.link] = result.target
 
     callback null, conversions
