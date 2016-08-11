@@ -12,20 +12,19 @@
   },
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --reporter spec --recursive -s 120",
-    "cov": "NODE_ENV=test COVERAGE=yes ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require test/registerCoverageHandlers.js --recursive --reporter html-cov -s 120  > coverage-report.html && open coverage-report.html",
+    "cov": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report text-summary lcov && open coverage/lcov-report/index.html",
     "lint": "COFFEELINT_CONFIG=./test/coffeelint.json ./node_modules/.bin/coffeelint lib"
   },
   "dependencies": {
     "async": "^0.9.0",
-    "coffee-script": "^1.9.1",
-    "csv-parse": "^0.1.0",
+    "coffee-script": "^1.10.0",
+    "csv-parse": "^0.1.4",
     "stream-transform": "0.0.7"
   },
   "devDependencies": {
-    "codo": "^2.0.11",
-    "coffee-coverage": "^0.4.5",
-    "coffeedoc": "^0.3.1",
-    "coffeelint": "^1.9.3",
-    "mocha": "^2.2.1"
+    "coffee-coverage": "^1.0.0",
+    "coffeelint": "^1.15.7",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
   }
 }
