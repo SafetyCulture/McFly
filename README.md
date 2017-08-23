@@ -22,6 +22,7 @@
 # McFly
 
 [![Build Status](https://travis-ci.org/SafetyCulture/McFly.svg?branch=master)](https://travis-ci.org/SafetyCulture/McFly)
+[![Coverage Status](https://coveralls.io/repos/github/SafetyCulture/McFly/badge.svg?branch=master)](https://coveralls.io/github/SafetyCulture/McFly?branch=master)
 
 ## Purpose and Intent
 
@@ -43,7 +44,7 @@ McFly, by default, utilises the 'backward' database, part of the larger IANA Tim
   under a Public Domain license. This will convert all deprecated timezone strings which have at any time formed a part
   of the IANA or Olson Timezone Databases to their modern equivalent.
   
-Included 'Backward' Version: **2016f**
+Included 'Backward' Version: **2017b**
   
 McFly is designed to ingest 'link' files provided by IANA as part of their Timezone Database which are
   used to alias one timezone string to another timezone string. You can provide other link files from the IANA data 
@@ -112,3 +113,4 @@ Require the McFly module and call the `convert` method passing in the `oldTimezo
     This means changes to the state of conversions of the filesystem may not be updated unless the module is re-imported
     or the `_conversionCache` property on the module root is cleared.
     
+
