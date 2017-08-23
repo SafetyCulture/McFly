@@ -2,8 +2,24 @@
   "name": "mcfly-timezone",
   "version": "1.1.0",
   "description": "Changes deprecated timezone strings into modern IANA Olsen Timezone equivalents.",
-  "license" : "Apache-2.0",
-  "keywords": ["timezone", "timezones", "zoneinfo", "tzdata", "tz", "olson", "iana", "deprecated", "backward", "historical", "old", "convert", "conversion", "modernise", "modern"],
+  "license": "Apache-2.0",
+  "keywords": [
+    "timezone",
+    "timezones",
+    "zoneinfo",
+    "tzdata",
+    "tz",
+    "olson",
+    "iana",
+    "deprecated",
+    "backward",
+    "historical",
+    "old",
+    "convert",
+    "conversion",
+    "modernise",
+    "modern"
+  ],
   "author": {
     "name": "Tristan Davey",
     "email": "tristan.davey@safetyculture.io"
@@ -14,7 +30,9 @@
   },
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --reporter spec --recursive -s 120",
-    "cov": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report text-summary lcov && open coverage/lcov-report/index.html",
+    "cov": "npm run cov:html",
+    "cov:html": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report text-summary lcov && open coverage/lcov-report/index.html",
+    "cov:coveralls": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "COFFEELINT_CONFIG=./test/coffeelint.json ./node_modules/.bin/coffeelint lib"
   },
   "dependencies": {
@@ -26,6 +44,7 @@
   "devDependencies": {
     "coffee-coverage": "^1.0.0",
     "coffeelint": "^1.15.7",
+    "coveralls": "^2.13.1",
     "istanbul": "^0.4.4",
     "mocha": "^2.5.3"
   }
