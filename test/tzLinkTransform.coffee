@@ -1,5 +1,5 @@
 assert = require 'assert'
-TzTsvTranform = require '../lib/tzTsvTransform'
+TzTsvTranform = require '../src/tzTsvTransform'
 
 describe 'tzLinkTransform', ->
 
