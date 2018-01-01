@@ -1,7 +1,7 @@
 assert = require 'assert'
 stream = require 'stream'
 
-tzLinkParser = require '../lib/tzLinkParser'
+tzLinkParser = require '../src/tzLinkParser'
 
 describe 'tzLinkParser', ->
 

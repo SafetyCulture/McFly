@@ -2,6 +2,7 @@
   "name": "mcfly-timezone",
   "version": "1.1.0",
   "description": "Changes deprecated timezone strings into modern IANA Olsen Timezone equivalents.",
+  "main": "dist/mcfly.js",
   "license": "Apache-2.0",
   "keywords": [
     "timezone",
@@ -33,7 +34,9 @@
     "cov": "npm run cov:html",
     "cov:html": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report text-summary lcov && open coverage/lcov-report/index.html",
     "cov:coveralls": "NODE_ENV=test LOG_LEVEL=error ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --recursive -s 120 test && ./node_modules/.bin/istanbul report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "lint": "COFFEELINT_CONFIG=./test/coffeelint.json ./node_modules/.bin/coffeelint lib"
+    "lint": "COFFEELINT_CONFIG=./test/coffeelint.json ./node_modules/.bin/coffeelint src",
+    "build": "coffee --compile --output dist/ src/",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "async": "^0.9.0",

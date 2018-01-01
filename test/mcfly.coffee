@@ -1,7 +1,7 @@
 assert = require 'assert'
 path = require 'path'
 
-mcfly = require '../lib/mcfly'
+mcfly = require '../src/mcfly'
 
 CONVERSION_FILE_PATH = path.join __dirname, "conversions"
 CONVERSION_FILE = path.join CONVERSION_FILE_PATH, "test1"
