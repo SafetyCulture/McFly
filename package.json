@@ -1,6 +1,6 @@
 {
   "name": "mcfly-timezone",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Changes deprecated timezone strings into modern IANA Olsen Timezone equivalents.",
   "main": "dist/mcfly.js",
   "license": "Apache-2.0",
